@@ -2,3 +2,8 @@
 
 .chapter-mode .contact{overflow:hidden}
 .chapter-mode .contact{min-height:100svh}
+
+/* Quiet navigation and consistent chapter motion. */
+.chapter-pages-nav,.chapter-position{opacity:var(--chrome-opacity,0);transition:opacity .18s ease}.chapter-pages-nav a{position:relative;overflow:hidden;transition:background .25s ease,color .25s ease}.chapter-pages-nav a span{position:relative;z-index:1}.chapter-pages-nav a i{position:absolute;bottom:0;left:15%;width:70%;height:2px;background:#709e8e;transform:scaleX(var(--read,0));transform-origin:left}.chapter-pages-nav a[aria-current=page] i{background:#245d4b}.chapter-screen{box-shadow:0 -24px 90px #0005}.chapter-position{font-family:'DM Sans','Microsoft YaHei',sans-serif;letter-spacing:.8px}.chapter-screen>.section{padding-bottom:115px}@media(max-width:700px){.chapter-screen>.section{padding-bottom:100px}.chapter-position{bottom:max(12px,env(safe-area-inset-bottom))}.chapter-pages-nav{top:max(14px,env(safe-area-inset-top))}}
+
+.chapter-screen:not(:first-child)::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;z-index:2;background:linear-gradient(90deg,transparent,#b2f5df66,transparent);opacity:var(--edge-alpha,0);pointer-events:none}
